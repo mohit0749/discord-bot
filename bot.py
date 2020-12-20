@@ -26,6 +26,7 @@ async def on_ready():
 async def on_message(message):
     if message.content.strip().lower() == 'hi':
         await message.channel.send("hey")
+    await bot.process_commands(message)
 
 
 @bot.command(name='google', help='search on google')
@@ -40,7 +41,6 @@ async def recent(ctx, keyword):
     result = get_recent_search(keyword, session)
     for res in result:
         await ctx.send(res)
-
 
 bot.run(TOKEN)
 
