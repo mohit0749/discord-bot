@@ -44,9 +44,7 @@ def top_n_results(results, n: int = 5) -> list:
     for i, item in enumerate(results):
         if i == n:
             break
-        url = item.split('/url?q=')
-        if len(url) == 0:
-            continue
+        url = f"https://www.google.com/{item}"
         top_results.append(url[-1])
 
     return top_results
