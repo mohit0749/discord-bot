@@ -4,7 +4,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 from database import Session
-from search.search import search, get_recent_search
+from search.search import search, get_recent_search, save_search_history
 from searchengine.google_search import Google
 from setup_db import init_db
 
@@ -32,6 +32,7 @@ async def on_message(message):
 @bot.command(name='google', help='search on google')
 async def google(ctx, keyword):
     result = search(google_search, keyword)
+    save_search_history(keyword, session)
     for res in result:
         await ctx.send(res)
 
@@ -41,6 +42,7 @@ async def recent(ctx, keyword):
     result = get_recent_search(keyword, session)
     for res in result:
         await ctx.send(res)
+
 
 bot.run(TOKEN)
 
