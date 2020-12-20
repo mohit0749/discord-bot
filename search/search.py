@@ -45,6 +45,6 @@ def top_n_results(results, n: int = 5) -> list:
         if i == n:
             break
         url = f"https://www.google.com/{item}"
-        top_results.append(url[-1])
+        top_results.append(url)
 
     return top_results
