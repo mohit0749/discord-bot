@@ -6,7 +6,6 @@ bs4==0.0.1
 certifi==2020.12.5
 chardet==3.0.4
 click==7.1.2
-coverage @ file:///opt/concourse/worker/volumes/live/0965e890-11eb-4eb1-7a75-e09ae078b152/volume/coverage_1605479754333/work
 discord==1.0.1
 discord.py==1.5.1
 Flask==1.1.2
@@ -14,7 +13,6 @@ idna==2.10
 itsdangerous==1.1.0
 Jinja2==2.11.2
 lxml==4.6.2
-MarkupSafe @ file:///opt/concourse/worker/volumes/live/fac44ebc-60de-4182-7f89-29bb8796c554/volume/markupsafe_1607027351541/work
 multidict==4.7.6
 python-dotenv==0.15.0
 requests==2.25.1
